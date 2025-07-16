@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: PickPayDesafio
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/desafioPickPay
+    username: postgres
+    password: 0814jw
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+
+  flyway:
+    enabled: true
+
