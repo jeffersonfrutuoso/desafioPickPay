@@ -14,16 +14,16 @@ public class ControllerExceptionHandler {
     @ExceptionHandler(UnauthorizedTransactionException.class)
     public ResponseEntity<Map<String, String>> handlerUnauthorizedTransactionException (UnauthorizedTransactionException exception) {
         Map<String, String> response = new HashMap<>();
-        response.put("error", exception.getMessage());
-        response.put("message", "usuario do tipo lojista nao esta autorizado a enviar dinheiro");
+        response.put("Message", exception.getMessage());
+        response.put("Error", "Não Autorizado");
         return new ResponseEntity<>(response, HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(InsufficientBalanceException.class)
     public ResponseEntity<Map<String, String>> handlerInsufficientBalanceException (InsufficientBalanceException exception) {
         Map<String, String> response = new HashMap<>();
-        response.put("error", exception.getMessage());
-        response.put("message", "Você nao tem saldo suficiente");
+        response.put("Message", exception.getMessage());
+        response.put("Error", "saldo insuficiente");
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
@@ -32,5 +32,12 @@ public class ControllerExceptionHandler {
         Map<String, String> response = new HashMap<>();
         response.put("error", exception.getMessage());
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(ServiceNotificationException.class)
+    public ResponseEntity<Map<String, String>> handlerServiceNotificationException (ServiceNotificationException exception) {
+        Map<String, String> response = new HashMap<>();
+        response.put("error", exception.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.SERVICE_UNAVAILABLE);
     }
 }
