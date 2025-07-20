@@ -20,11 +20,11 @@ public class UserService {
 
     public void validarTransaction(User enviador, BigDecimal valorDaTransferencia){
         if(enviador.getUserType() == UserType.Lojista){
-            throw new UnauthorizedTransactionException("Não autorizado");
+            throw new UnauthorizedTransactionException("Usuario do tipo lojista não pode fazer transferencia.");
         }
 
         if(enviador.getCarteira().compareTo(valorDaTransferencia) < 0){
-            throw new InsufficientBalanceException("Saldo insuficiente");
+            throw new InsufficientBalanceException("Você não tem Saldo suficiente para realizar a transferencia");
         }
     }
 
