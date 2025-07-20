@@ -13,4 +13,11 @@ spring:
 
   flyway:
     enabled: true
+    locations: classpath:db/migration
 
+autorizacao:
+  url: https://util.devi.tools/api/v2/authorize
+
+
+notificacao:
+  url: https://util.devi.tools/api/v1/notify
