@@ -46,7 +46,7 @@ git clone https://github.com/jeffersonfrutuoso/desafioPickPay.git
 cd desafioPickPay
 
 # Subir os containers da aplicação e banco
-docker-compose up --build
+docker-compose up -d
 API: http://localhost:8080
 
 PostgreSQL: localhost:5432
