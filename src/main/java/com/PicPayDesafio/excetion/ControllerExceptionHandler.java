@@ -40,4 +40,11 @@ public class ControllerExceptionHandler {
         response.put("error", exception.getMessage());
         return new ResponseEntity<>(response, HttpStatus.SERVICE_UNAVAILABLE);
     }
+
+    @ExceptionHandler(userAlreadyRegisteredException.class)
+    public ResponseEntity<Map<String, String>> handleruserAlreadyRegisteredException (userAlreadyRegisteredException exception) {
+        Map<String, String> response = new HashMap<>();
+        response.put("error", exception.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.CONFLICT);
+    }
 }
