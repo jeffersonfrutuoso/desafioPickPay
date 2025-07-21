@@ -2,7 +2,7 @@
 
 Este projeto é uma solução para o desafio técnico proposto pelo PicPay. Ele simula uma plataforma de pagamentos entre usuários e lojistas, com regras de negócio, validações e integrações externas.
 
-> Repositório: [github.com/jeffersonfrutuoso/desafioPickPay](https://github.com/jeffersonfrutuoso/desafioPickPay)
+> Repositório: [github.com/PicPay/picpay-desafio-backend](https://github.com/PicPay/picpay-desafio-backend)
 
 ---
 
