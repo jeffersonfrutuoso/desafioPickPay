@@ -54,9 +54,7 @@ Usuário: postgres
 Senha: postgres
 
 🧱 Estrutura do Projeto
-bash
-Copiar
-Editar
+
 src/
 ├── controller         # Endpoints REST
 ├── domain             # Entidades JPA
@@ -70,8 +68,7 @@ src/
 🔁 Endpoint Principal: Transferência
 POST /transfer
 json
-Copiar
-Editar
+
 {
   "value": 100.0,
   "payer": 1,
@@ -95,9 +92,7 @@ As migrations rodam automaticamente ao subir a aplicação.
 
 Scripts estão localizados em:
 
-css
-Copiar
-Editar
+
 src/main/resources/db/migration/
 Você pode visualizar e editar dados pelo DBeaver, conectando ao banco PostgreSQL.
 
